@@ -3,6 +3,9 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 // GET all orders that have been placed, populate with data from the pizza collection
+//
+// This GET route is for the customer orders that will be shown on the ADMIN page!!
+//
 router.get('/', (req, res) => {
     // Find all orders and return them
     pool.query('SELECT * FROM "orders";').then((result) => {
