@@ -24,6 +24,14 @@ const pizzaList = (state = [], action) => {
   return state;
 };
 
+//
+const customerInfo = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_NEW_CUSTOMER':
+      return action.payload;
+  }
+};
+
 // Create the main STORE that will serve all STATE values throughout our App
 const store = createStore(
   combineReducers({
