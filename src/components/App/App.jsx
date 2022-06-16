@@ -1,6 +1,7 @@
+// Import the core libraries used
 import React from 'react';
 import axios from 'axios';
-import './App.css';
+
 import CustomerInfo from '../CustomerInfo/CustomerInfo'
 
 // Import the Router to allow for linking throughout out App.jsx project
@@ -8,6 +9,12 @@ import CustomerInfo from '../CustomerInfo/CustomerInfo'
 import { Route, HashRouter as Router } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+
+// Import the components used in App.jsx
+import Checkout from '../Checkout/Checkout';
+
+// Import the stylesheets
+import './App.css';
 
 function App() {
 
@@ -45,7 +52,13 @@ function App() {
     
         <img src='images/pizza_photo.png' />
         <p>Pizza is great.</p>
+    
+        <Route path="/checkout" exact>
+          <Checkout />
+        </Route>
+
       <CustomerInfo/>
+
       </div>
     </Router>
   );
