@@ -110,7 +110,7 @@ function CustomerInfo() {
                     className="type-input"
                     onChange={handleTypeChange}
                 /> <label htmlFor="delivery">Delivery</label>
-
+                {/* submit button */}
                 <button type="submit">Submit</button>
             </form>
         </div>
