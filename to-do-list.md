@@ -49,7 +49,7 @@
             [ ] type
                 [ ] *radio button to choose between `Pickup` or `Delivery`
             [ ] total
-[ ] **Checkout.jsx**
+[ Colin ] **Checkout.jsx**
     [ ] `useSelector` to get *customer information* from REDUX
     [ ] `useSelector` to get *pizza order* from REDUX
         [ ] Show the information in a <table> view
