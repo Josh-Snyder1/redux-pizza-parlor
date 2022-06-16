@@ -20,7 +20,7 @@
         [ ] pizzas as array
         [ ] customer information
         [ ] current pizza?
-[ ] **PizzaList.jsx**
+[ JOHN ] **PizzaList.jsx**
     [ ] axios GET from database
     [ ] store array to REDUX on index.js
     [ ] header saying: "Step 1: Select Your Pizza"
@@ -38,7 +38,7 @@
         [ ] cart icon
         [ ] total cost of pizzas
         [ ] (stretch) # pizzas
-[ ] **CustomerInfo.jsx**
+[ JOSH ] **CustomerInfo.jsx**
     [ ] *form* with `onSubmit()` function
         [ ] `axios` to POST to db
         [ ] *inputs*
@@ -49,7 +49,7 @@
             [ ] type
                 [ ] *radio button to choose between `Pickup` or `Delivery`
             [ ] total
-[ Colin ] **Checkout.jsx**
+[ COLIN ] **Checkout.jsx**
     [ ] `useSelector` to get *customer information* from REDUX
     [ ] `useSelector` to get *pizza order* from REDUX
         [ ] Show the information in a <table> view
