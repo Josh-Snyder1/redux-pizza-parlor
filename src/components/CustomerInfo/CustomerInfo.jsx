@@ -100,6 +100,7 @@ function CustomerInfo() {
                     required
                     type="radio"
                     id="pickup"
+                    name="delivery-method"
                     className="type-input"
                     onChange={handleTypeChange}
                 /> <label htmlFor="pickup">Pickup</label> <br/>
@@ -107,6 +108,7 @@ function CustomerInfo() {
                     required
                     type="radio"
                     id="delivery"
+                    name="delivery-method"
                     className="type-input"
                     onChange={handleTypeChange}
                 /> <label htmlFor="delivery">Delivery</label>

@@ -2,7 +2,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import CustomerInfo from '../CustomerInfo/CustomerInfo'
 
 // Import the Router to allow for linking throughout out App.jsx project
 // and Route to link to specific pages
@@ -12,6 +11,8 @@ import { useState, useEffect } from 'react';
 
 // Import the components used in App.jsx
 import Checkout from '../Checkout/Checkout';
+import CustomerInfo from '../CustomerInfo/CustomerInfo'
+import PizzaList from '../PizzaList/PizzaList';
 
 // Import the stylesheets
 import './App.css';
@@ -57,7 +58,9 @@ function App() {
           <Checkout />
         </Route>
 
-      <CustomerInfo/>
+        <CustomerInfo/>
+
+        <PizzaList />
 
       </div>
     </Router>
