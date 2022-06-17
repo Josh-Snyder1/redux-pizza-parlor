@@ -23,7 +23,13 @@ const pizzaList = (state = [], action) => {
   }
   return state;
 };
-
+const cart = (state = [], action) => {
+  switch(action.type) {
+    case "ADD_TO_CART":
+      return [...state,action.payload]
+  }
+  return state;
+}
 //
 const customerInfo = (state = [], action) => {
   switch (action.type) {
@@ -33,6 +39,7 @@ const customerInfo = (state = [], action) => {
     default:
         return state
   }
+  return state;
 };
 
 // Create the main STORE that will serve all STATE values throughout our App
@@ -41,6 +48,8 @@ const store = createStore(
     // Contains each of the individual STATE items that we want access to
     customerInfo,
     pizzaList,
+    customerInfo,
+    cart
   }),
   applyMiddleware(logger)
 );
