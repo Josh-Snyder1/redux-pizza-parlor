@@ -50,10 +50,10 @@
                 [ X ] *radio button to choose between `Pickup` or `Delivery`
             [ ] total
 [ COLIN ] **Checkout.jsx**
-    [ ] `useSelector` to get *customer information* from REDUX
-    [ ] `useSelector` to get *pizza order* from REDUX
-        [ ] Show the information in a <table> view
-    [ ] show the total cost of the order
+    [x] `useSelector` to get *customer information* from REDUX
+    [x] `useSelector` to get *pizza order* from REDUX
+        [x] Show the information in a <table> view
+    [x] show the total cost of the order
     [ ] <button> for "Checkout"
     [ ] display delivery method (pickup or delivery)
 [ ] **admin.jsx**

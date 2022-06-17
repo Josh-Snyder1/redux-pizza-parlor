@@ -17,7 +17,9 @@ function Checkout() {
     // Get the pizza order from the STORE
     const orderList = useSelector(store => store.cart)
 
-    // 
+
+
+    // Build out the HTML with associated logic
     return (
         <section>
             {/* Page title */}
@@ -42,10 +44,10 @@ function Checkout() {
                 <tbody>
                     {/* Loop through the current array of pizzas in the cart  */}
 
-                    {orderList.map(order =>
+                    {orderList.map((orderItem, index) =>
                         <CheckoutAddRowToTable
-                            key={order.id}
-                            order={order}
+                            key={`${orderItem.id}-${index}`}
+                            orderItem={orderItem}
                         />
                     )}
                 </tbody>
