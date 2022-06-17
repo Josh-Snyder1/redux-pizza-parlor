@@ -30,6 +30,14 @@ const cart = (state = [], action) => {
   }
   return state;
 }
+const runningTotal = (state = 0, action) => {
+  console.log('this is the runningtotal',action.payload)
+  switch(action.type)
+  {case "UPDATE_TOTAL":
+      return action.payload
+  }
+  return state;
+}
 //
 const customerInfo = (state = [], action) => {
   switch (action.type) {
@@ -49,6 +57,7 @@ const store = createStore(
     customerInfo,
     pizzaList,
     customerInfo,
+    runningTotal,
     cart
   }),
   applyMiddleware(logger)
