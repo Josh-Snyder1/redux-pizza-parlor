@@ -15,7 +15,8 @@ function DisplayPizza({pizzaList}){
             type: "ADD_TO_CART",
             payload: {
                 name: pizzaList.name,
-                price: pizzaList.price
+                price: pizzaList.price,
+                total
             }
         })
     }
