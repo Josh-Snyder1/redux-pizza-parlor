@@ -131,7 +131,31 @@
   font-weight: var(--fw-bold);
 }
 
+.orders-table,th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+th,td{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+th{
+  background-color: grey;
+}
+
 .pizza-button-container {
   outline: 1px solid yellow;
 }
-
