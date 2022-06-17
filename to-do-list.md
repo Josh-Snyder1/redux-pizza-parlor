@@ -39,15 +39,15 @@
         [ ] total cost of pizzas
         [ ] (stretch) # pizzas
 [ JOSH ] **CustomerInfo.jsx**
-    [ ] *form* with `onSubmit()` function
-        [ ] `axios` to POST to db
-        [ ] *inputs*
-            [ ] customer_name
-            [ ] street_address
-            [ ] city
-            [ ] zip
-            [ ] type
-                [ ] *radio button to choose between `Pickup` or `Delivery`
+    [ X ] *form* with `onSubmit()` function
+        [  ] `axios` to POST to db
+        [ X ] *inputs*
+            [ X ] customer_name
+            [ X ] street_address
+            [ X ] city
+            [ X ] zip
+            [ X ] type
+                [ X ] *radio button to choose between `Pickup` or `Delivery`
             [ ] total
 [ COLIN ] **Checkout.jsx**
     [ ] `useSelector` to get *customer information* from REDUX
