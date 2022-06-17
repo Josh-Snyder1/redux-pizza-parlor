@@ -13,3 +13,20 @@
 .App-title {
   font-size: 2em;
 }
+
+.boxContainer {
+  display: inline-block;  
+  padding: 7px;
+  text-align: center;
+  border: 2px solid black;
+  margin: 6px;
+  height: 250px;
+  width: 250px;
+  background-color: rgb(255, 89, 89);
+}
+.pizzaName {
+  font-size: 25px;
+}
+.price {
+  font-size: 20px;
+}

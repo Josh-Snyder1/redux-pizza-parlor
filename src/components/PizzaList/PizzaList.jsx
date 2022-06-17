@@ -8,7 +8,14 @@ function PizzaList(){
     return(
         <>
         <h3>Step 1: Select Your Pizza</h3>
-       <DisplayPizza />
+        <ul>
+            {pizza.map((item, i) => {
+            return <DisplayPizza 
+            key={i}
+            pizzaList={item}/>
+        })}
+        {/* <DisplayPizza pizzaList={pizza}/> */}
+       </ul>
         </>
     )
 }
