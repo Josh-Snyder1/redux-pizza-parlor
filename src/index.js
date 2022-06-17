@@ -23,7 +23,13 @@ const pizzaList = (state = [], action) => {
   }
   return state;
 };
-
+const cart = (state = [], action) => {
+  switch(action.type) {
+    case "ADD_TO_CART":
+      return [...state,action.payload]
+  }
+  return state;
+}
 //
 const customerInfo = (state = [], action) => {
   switch (action.type) {
@@ -38,7 +44,8 @@ const store = createStore(
   combineReducers({
     // Contains each of the individual STATE items that we want access to
     pizzaList,
-    customerInfo
+    customerInfo,
+    cart
   }),
   applyMiddleware(logger)
 );
