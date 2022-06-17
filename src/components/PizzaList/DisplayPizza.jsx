@@ -15,15 +15,24 @@ function DisplayPizza({pizzaList}){
         total += Number(pizzaList.price) 
         dispatch(
             { type: "ADD_TO_CART",
-              payload: {
-                    name: pizzaList.name,
+            payload: {
+                 name: pizzaList.name,
                     price: pizzaList.price,
                     total
-                 }
+                }
             })
-            runningTotal();
-        }
+        runningTotal();
+    }
     
+    const deleteItemFromCart = () => {
+        dispatch(
+            {type:"DELETE_ITEM",
+            payload: pizzaList.i
+        }
+        )
+        runningTotal()
+    }
+
     const runningTotal = () => {
         dispatch(
           {type: "UPDATE_TOTAL",
@@ -50,8 +59,7 @@ function DisplayPizza({pizzaList}){
             </div>
             <div className='pizza-button-container'>
                 <button type="submit" onClick={addToCart}>Add</button>
-                <button type="submit">Remove</button>
-            </div>
+                <button type="submit" onClick={deleteItemFromCart}>Remove</button>
          </div>
         </>
     )
