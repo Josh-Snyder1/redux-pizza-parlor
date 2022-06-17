@@ -1,10 +1,12 @@
 import { useSelector } from 'react-redux';
 import cartPic from "./cartPic.png";
+import TotalCost from '../Utilities/TotalCost';
 
 function Header(){
     const theTotal = useSelector(store => store.runningTotal)
 
     const totalCount = useSelector(store => store.cart.length)
+    const orderList = useSelector(store => store.cart)
 
     return(
         <header className='App-header'>
@@ -21,10 +23,7 @@ function Header(){
             {/* Choose whether or not the cart total is shown */}
             {theTotal.total ?
                 <h3>Cart Total: <span>{
-                    theTotal.total.toLocaleString("en-US", {
-                        style: "currency",
-                        currency: "USD"}
-                    )
+                    <TotalCost objList={orderList}/>
                 }</span></h3>
                 :
                 null
