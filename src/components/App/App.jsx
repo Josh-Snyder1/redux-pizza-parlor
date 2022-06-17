@@ -5,7 +5,7 @@ import axios from 'axios';
 
 // Import the Router to allow for linking throughout out App.jsx project
 // and Route to link to specific pages
-import { Route, HashRouter as Router } from 'react-router-dom';
+import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 
@@ -53,14 +53,18 @@ function App() {
     
         <img src='images/pizza_photo.png' />
         <p>Pizza is great.</p>
-    
+
+        <Route path="/" exact>
+        <PizzaList />
+        </Route>
+ 
+        <Route path="/customer" exact>
+        <CustomerInfo/>
+        </Route>
+
         <Route path="/checkout" exact>
           <Checkout />
         </Route>
-
-        <CustomerInfo/>
-
-        <PizzaList />
 
       </div>
     </Router>

@@ -30,6 +30,7 @@ const customerInfo = (state = [], action) => {
     case 'ADD_NEW_CUSTOMER':
       return action.payload;
   }
+  return state;
 };
 
 // Create the main STORE that will serve all STATE values throughout our App
@@ -37,6 +38,7 @@ const store = createStore(
   combineReducers({
     // Contains each of the individual STATE items that we want access to
     pizzaList,
+    customerInfo
   }),
   applyMiddleware(logger)
 );

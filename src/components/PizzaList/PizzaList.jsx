@@ -1,8 +1,10 @@
 import DisplayPizza from "./DisplayPizza";
 import { useSelector } from 'react-redux'
+import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
 
 function PizzaList(){
 
+    const history = useHistory();
     const pizza = useSelector(store => store.pizzaList)
 
     return(
@@ -16,6 +18,7 @@ function PizzaList(){
         })}
         {/* <DisplayPizza pizzaList={pizza}/> */}
        </ul>
+       <button onClick={() => history.push('/customer')}>NEXT</button>
         </>
     )
 }

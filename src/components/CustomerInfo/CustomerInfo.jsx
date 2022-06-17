@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
 
 
 function CustomerInfo() {
 
+    const history = useHistory();
     const dispatch = useDispatch();
     //initializes variable object to hold customer info
     //from input fields to package up to dipatch to index.js
@@ -60,7 +62,9 @@ function CustomerInfo() {
         type: 'ADD_NEW_CUSTOMER',
         payload: custInfoToAdd
         });
-    
+        //onSubmit changes our current endpoint by pushing the
+        //location we want to go to the history table
+        history.push('/checkout');
     };//end handleSubmit
 
 
@@ -101,6 +105,7 @@ function CustomerInfo() {
                     type="radio"
                     id="pickup"
                     name="delivery-method"
+                    value="pickup"
                     className="type-input"
                     onChange={handleTypeChange}
                 /> <label htmlFor="pickup">Pickup</label> <br/>
@@ -110,10 +115,11 @@ function CustomerInfo() {
                     id="delivery"
                     name="delivery-method"
                     className="type-input"
+                    value="delivery"
                     onChange={handleTypeChange}
                 /> <label htmlFor="delivery">Delivery</label>
                 {/* submit button */}
-                <button type="submit">Submit</button>
+                <button type="submit">NEXT</button>
             </form>
         </div>
     )
