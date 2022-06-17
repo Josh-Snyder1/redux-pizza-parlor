@@ -27,6 +27,8 @@ const cart = (state = [], action) => {
   switch(action.type) {
     case "ADD_TO_CART":
       return [...state,action.payload]
+    case "DELETE_ITEM":
+      return state.splice(1,action.payload)
   }
   return state;
 }
