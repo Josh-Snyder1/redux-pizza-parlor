@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import Checkout from '../Checkout/Checkout';
 import CustomerInfo from '../CustomerInfo/CustomerInfo'
 import PizzaList from '../PizzaList/PizzaList';
+import Admin from '../Admin/Admin';
 
 // Import the stylesheets
 import './App.css';
@@ -65,6 +66,11 @@ function App() {
         <Route path="/checkout" exact>
           <Checkout />
         </Route>
+
+        <Route path="/admin" exact>
+          <Admin />
+        </Route>
+
 
       </div>
     </Router>
