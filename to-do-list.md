@@ -17,13 +17,13 @@
     [ ] Route
 [ ] **index.js**
     [ ] REDUX stores
-        [ ] pizzas as array
-        [ ] customer information
+        [x] pizzas as array
+        [x] customer information
         [ ] current pizza?
 [ JOHN ] **PizzaList.jsx**
-    [ ] axios GET from database
-    [ ] store array to REDUX on index.js
-    [ ] header saying: "Step 1: Select Your Pizza"
+    [x] axios GET from database
+    [x] store array to REDUX on index.js
+    [x] header saying: "Step 1: Select Your Pizza"
     [ ] **DisplayPizza.jsx**
         [ ] pizza name
         [ ] button to add to cart

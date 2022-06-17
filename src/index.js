@@ -35,6 +35,9 @@ const customerInfo = (state = [], action) => {
   switch (action.type) {
     case 'ADD_NEW_CUSTOMER':
       return action.payload;
+
+    default:
+        return state
   }
   return state;
 };
@@ -43,6 +46,7 @@ const customerInfo = (state = [], action) => {
 const store = createStore(
   combineReducers({
     // Contains each of the individual STATE items that we want access to
+    customerInfo,
     pizzaList,
     customerInfo,
     cart

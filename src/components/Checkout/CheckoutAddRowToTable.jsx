@@ -4,7 +4,11 @@ function CheckoutAddRowToTable({ order }) {
     return (
         <tr>
             <td>{order.name}</td>
-            <td>{order.price}</td>
+            <td>
+                ${order.price.toLocaleString("en-US", {
+                        style: "currency",
+                        currency: "USD"}
+                )}</td>
         </tr>
     )
 }
