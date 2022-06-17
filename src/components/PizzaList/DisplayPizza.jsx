@@ -5,6 +5,8 @@ import TotalCost from '../Utilities/TotalCost';
 // with the data. Otherwise it would be very hard to just select a singular item
 function DisplayPizza({pizzaList}){
 
+    console.log(pizzaList, "????")
+
     let total = 0
 
     const dispatch = useDispatch()
@@ -37,16 +39,19 @@ function DisplayPizza({pizzaList}){
             <div className="pizzaName">
                 {pizzaList.name}
             </div>
-                <br></br>
+            <div className='pizza-image-container'>
+                <img src={pizzaList.image_path} alt="" />
+            </div>
             <div className="ingredients">
                 {pizzaList.description}
             </div>
-                <br></br>
             <div className="price">
                <TotalCost objList={[pizzaList]}/>
             </div>
+            <div className='pizza-button-container'>
                 <button type="submit" onClick={addToCart}>Add</button>
                 <button type="submit">Remove</button>
+            </div>
          </div>
         </>
     )
