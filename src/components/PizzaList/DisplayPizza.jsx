@@ -1,40 +1,65 @@
 import { useDispatch } from 'react-redux';
-
+import TotalCost from '../Utilities/TotalCost';
 
 //passing this in as a prop vs doing useSelector makes it easier to work
 // with the data. Otherwise it would be very hard to just select a singular item
 function DisplayPizza({pizzaList}){
+
+    console.log(pizzaList, "????")
 
     let total = 0
 
     const dispatch = useDispatch()
 
     const addToCart = () => {
-        total += pizzaList.price 
-        dispatch({
-            type: "ADD_TO_CART",
+        total += Number(pizzaList.price) 
+        dispatch(
+            { type: "ADD_TO_CART",
             payload: {
-                name: pizzaList.name,
-                price: pizzaList.price
-            }
+                 name: pizzaList.name,
+                    price: pizzaList.price,
+                    total
+                }
+            })
+        runningTotal();
+    }
+    
+    const deleteItemFromCart = () => {
+        dispatch(
+            {type:"DELETE_ITEM",
+            payload: pizzaList.i
+        }
+        )
+        runningTotal()
+    }
+
+    const runningTotal = () => {
+        dispatch(
+          {type: "UPDATE_TOTAL",
+           payload: {
+               total
+           }
         })
     }
+
     return(
         <>
         <div className="boxContainer">
             <div className="pizzaName">
                 {pizzaList.name}
             </div>
-                <br></br>
+            <div className='pizza-image-container'>
+                <img src={pizzaList.image_path} alt="" />
+            </div>
             <div className="ingredients">
                 {pizzaList.description}
             </div>
-                <br></br>
             <div className="price">
-                {pizzaList.price}
+               <TotalCost objList={[pizzaList]}/>
             </div>
+            <div className='pizza-button-container'>
                 <button type="submit" onClick={addToCart}>Add</button>
-                <button type="submit">Remove</button>
+                <button type="submit" onClick={deleteItemFromCart}>Remove</button>
          </div>
         </>
     )

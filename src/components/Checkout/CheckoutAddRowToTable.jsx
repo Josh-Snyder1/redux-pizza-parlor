@@ -1,10 +1,14 @@
 // Function that handles adding a row of information into the
 // checkout table
-function CheckoutAddRowToTable({ order }) {
+function CheckoutAddRowToTable({ orderItem }) {
     return (
         <tr>
-            <td>{order.name}</td>
-            <td>{order.price}</td>
+            <td>{orderItem.name}</td>
+            <td>
+                ${orderItem.price.toLocaleString("en-US", {
+                    style: "currency",
+                    currency: "USD"}
+                )}</td>
         </tr>
     )
 }

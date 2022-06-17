@@ -27,6 +27,16 @@ const cart = (state = [], action) => {
   switch(action.type) {
     case "ADD_TO_CART":
       return [...state,action.payload]
+    case "DELETE_ITEM":
+      return state.splice(1,action.payload)
+  }
+  return state;
+}
+const runningTotal = (state = 0, action) => {
+  console.log('this is the runningtotal',action.payload)
+  switch(action.type)
+  {case "UPDATE_TOTAL":
+      return action.payload
   }
   return state;
 }
@@ -35,6 +45,9 @@ const customerInfo = (state = [], action) => {
   switch (action.type) {
     case 'ADD_NEW_CUSTOMER':
       return action.payload;
+
+    default:
+        return state
   }
   return state;
 };
@@ -43,8 +56,10 @@ const customerInfo = (state = [], action) => {
 const store = createStore(
   combineReducers({
     // Contains each of the individual STATE items that we want access to
+    customerInfo,
     pizzaList,
     customerInfo,
+    runningTotal,
     cart
   }),
   applyMiddleware(logger)

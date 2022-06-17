@@ -14,6 +14,7 @@ import Checkout from '../Checkout/Checkout';
 import CustomerInfo from '../CustomerInfo/CustomerInfo'
 import PizzaList from '../PizzaList/PizzaList';
 import Admin from '../Admin/Admin';
+import Header from '../Header/Header';
 
 // Import the stylesheets
 import './App.css';
@@ -48,9 +49,7 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <header className='App-header'>
-          <h1 className='App-title'>Prime Pizza</h1>
-        </header>
+        <Header />
     
         {/* <img src='images/pizza_photo.png' /> */}
         {/* <p>Pizza is great.</p> */}
